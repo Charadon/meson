@@ -30,10 +30,12 @@ depends on your distro.
 
  - Debian, Ubuntu and derivatives: `sudo apt install build-essential`
  - Fedora, Centos, RHEL and derivatives: `sudo dnf install gcc-c++`
+ - SUSE and derivatives: `sudo zypper install gcc gcc-c++`
  - Arch: `sudo pacman -S gcc`
 
 ### Windows
 
+#### Visual Studio
 The most common development toolchain on Windows is Visual Studio,
 which can be downloaded from [the Visual Studio web
 site](https://visualstudio.microsoft.com/). Select the Community
@@ -48,6 +50,16 @@ a C and a C++ compiler.
 ![Installing the Visual Studio compilers](images/win_installvs.png)
 
 Once the installer finishes the compiler toolchain is ready to use.
+
+#### MinGW
+The easiest way to use MinGW is by using MSYS2, which you can
+download from [MSYS2's website](https://www.msys2.org/).
+
+Once MSYS2 is installed, run the MinGW64 MSYS2 terminal and install 
+gcc:
+
+Then when the package manager finishes, you can now use the compiler
+toolchain.
 
 ### macOS
 
@@ -68,10 +80,12 @@ Installing Meson is just as simple as installing the compiler toolchain.
 
  - Debian, Ubuntu and derivatives: `sudo apt install meson ninja-build`
  - Fedora, Centos, RHEL and derivatives: `sudo dnf install meson ninja-build`
+ - SUSE and derivatives: `sudo zypper install meson`
  - Arch: `sudo pacman -S meson`
 
 ### Windows
 
+#### Visual Studio
 Meson provides a standard Windows `.msi` installer that can be
 downloaded from [the Releases
 page](https://github.com/mesonbuild/meson/releases).
@@ -88,6 +102,12 @@ You should be able to run both `meson` and `ninja` and query their
 versions.
 
 ![A working Windows install](images/win_working.png)
+
+#### MinGW
+Open up the MinGW64 MSYS2 terminal and install meson:
+
+Once the package manager has finished, use `meson --version` and
+`ninja --version` to verify you have them installed.
 
 ### macOS
 
